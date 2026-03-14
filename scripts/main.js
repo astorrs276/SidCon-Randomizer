@@ -1,21 +1,23 @@
-let factionList = [{text: "Caylion Plutocracy\n", color: "#48b24d"}, 
-    {text: "Caylion Collaborative\n", color: "#48b24d"},
-    {text: "Eni Et Ascendancy\n", color: "#3a57bd"},
-    {text: "Eni Et Engineers\n", color: "#3a57bd"},
-    {text: "Faderan Conclave\n", color: "#e8ca2e"},
-    {text: "Society of Falling Light\n", color: "#e8ca2e"},
-    {text: "Im'dril Nomads\n", color: "#508ade"},
-    {text: "Grand Fleet\n", color: "#508ade"},
-    {text: "Kjasjavikalimm Directorate\n", color: "#c01209"},
-    {text: "Kjasjavikalimm Independent Nations\n", color: "#c01209"},
-    {text: "Kt’Zr’Kt’Rtl Adhocracy\n", color: "#fb6635"},
-    {text: "Kt’Zr’Kt’Rtl Technophiles\n", color: "#fb6635"},
-    {text: "Unity\n", color: "#908f8b"},
-    {text: "Deep Unity\n", color: "#908f8b"},
-    {text: "Yengii Society\n", color: "#6d4d91"},
-    {text: "Yengii Jii\n", color: "#6d4d91"},
-    {text: "Zeth Anocracy\n", color: "#da5294"},
-    {text: "Charity Syndicate\n", color: "#da5294"}];
+let factionList = [
+    {text: "Caylion Plutocracy\n", color: "#48B24D"}, 
+    {text: "Caylion Collaborative\n", color: "#48B24D"},
+    {text: "Eni Et Ascendancy\n", color: "#3A57BD"},
+    {text: "Eni Et Engineers\n", color: "#3A57BD"},
+    {text: "Faderan Conclave\n", color: "#E8CA2E"},
+    {text: "Society of Falling Light\n", color: "#E8CA2E"},
+    {text: "Im'dril Nomads\n", color: "#508ADE"},
+    {text: "Grand Fleet\n", color: "#508ADE"},
+    {text: "Kjasjavikalimm Directorate\n", color: "#C01209"},
+    {text: "Kjasjavikalimm Independent Nations\n", color: "#C01209"},
+    {text: "Kt’Zr’Kt’Rtl Adhocracy\n", color: "#FB6635"},
+    {text: "Kt’Zr’Kt’Rtl Technophiles\n", color: "#FB6635"},
+    {text: "Unity\n", color: "#908F8B"},
+    {text: "Deep Unity\n", color: "#908F8B"},
+    {text: "Yengii Society\n", color: "#6D4D91"},
+    {text: "Yengii Jii\n", color: "#6D4D91"},
+    {text: "Zeth Anocracy\n", color: "#DA5294"},
+    {text: "Charity Syndicate\n", color: "#DA5294"}
+];
 
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("button").forEach(button => {
