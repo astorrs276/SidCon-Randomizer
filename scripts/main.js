@@ -1,12 +1,21 @@
-let factionList = ["Caylion Plutocracy\n", "Caylion Collaborative\n", 
-    "Eni Et Ascendancy\n", "Eni Et Engineers\n", 
-    "Faderan Conclave\n", "Society of Falling Light\n", 
-    "Im'dril Nomads\n", "Grand Fleet\n", 
-    "Kjasjavikalimm Directorate\n", "Kjasjavikalimm Independent Nations\n", 
-    "Kt’Zr’Kt’Rtl Adhocracy\n", "Kt’Zr’Kt’Rtl Technophiles\n", 
-    "Unity\n", "Deep Unity\n", 
-    "Yengii Society\n", "Yengii Jii\n", 
-    "Zeth Anocracy\n", "Charity Syndicate\n"]
+let factionList = [{text: "Caylion Plutocracy\n", color: "#48b24d"}, 
+    {text: "Caylion Collaborative\n", color: "#48b24d"},
+    {text: "Eni Et Ascendancy\n", color: "#3a57bd"},
+    {text: "Eni Et Engineers\n", color: "#3a57bd"},
+    {text: "Faderan Conclave\n", color: "#e8ca2e"},
+    {text: "Society of Falling Light\n", color: "#e8ca2e"},
+    {text: "Im'dril Nomads\n", color: "#508ade"},
+    {text: "Grand Fleet\n", color: "#508ade"},
+    {text: "Kjasjavikalimm Directorate\n", color: "#c01209"},
+    {text: "Kjasjavikalimm Independent Nations\n", color: "#c01209"},
+    {text: "Kt’Zr’Kt’Rtl Adhocracy\n", color: "#fb6635"},
+    {text: "Kt’Zr’Kt’Rtl Technophiles\n", color: "#fb6635"},
+    {text: "Unity\n", color: "#908f8b"},
+    {text: "Deep Unity\n", color: "#908f8b"},
+    {text: "Yengii Society\n", color: "#6d4d91"},
+    {text: "Yengii Jii\n", color: "#6d4d91"},
+    {text: "Zeth Anocracy\n", color: "#da5294"},
+    {text: "Charity Syndicate\n", color: "#da5294"}];
 
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("button").forEach(button => {
@@ -39,7 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
             if (action === "Randomize") {
                 const factions = document.getElementById("factions-list");
                 let remaining = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-                let output = "Factions:\n";
                 choices = [];
                 for (let i = 0; i < count; i++) {
                     // Pick the faction itself
@@ -51,10 +59,26 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
                 // Order factions alphabetically
                 choices.sort((a, b) => a - b);
-                for (choice of choices) {
-                    output += factionList[choice];
+                factions.innerHTML = "";
+
+                const header = document.createElement("span");
+                header.textContent = "Factions:";
+                header.style.display = "block";
+                header.style.fontWeight = "bold";
+                header.style.marginBottom = "-15px";
+                factions.appendChild(header);
+                factions.appendChild(document.createElement("br"));
+
+                for (let i = 0; i < choices.length; i++) {
+                    const span = document.createElement("span");
+                    span.textContent = factionList[choices[i]].text;
+                    span.style.color = factionList[choices[i]].color;
+                    factions.appendChild(span);
+
+                    if (i != choices.length - 1) {
+                        factions.appendChild(document.createElement("br"));
+                    }
                 }
-                factions.textContent = output.trim();
             }
         });
     });

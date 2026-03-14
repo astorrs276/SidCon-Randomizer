@@ -62,5 +62,5 @@ body {
 #factions-list {
     padding-top: 20px;
     font-size: 18px;
-    white-space: pre-line;
+    line-height: 22px;
 }
