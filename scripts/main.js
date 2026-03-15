@@ -61,10 +61,10 @@ document.addEventListener("DOMContentLoaded", () => {
             // Toggle advanced settings menu
             if (action == "Advanced") {
                 const settings = document.querySelector(".advanced-settings");
-                if (settings.style.display === "none") {
-                    settings.style.display = "flex";
+                if (settings.style.display === "flex") {
+                    settings.style.display = "none";
                 } else {
-                    settings.style.display = "none"; 
+                    settings.style.display = "flex"; 
                 }
             }
 
